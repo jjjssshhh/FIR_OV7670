@@ -34,7 +34,7 @@ OV7670 카메라 영상을 실시간으로 VGA 출력하면서 스위치로 FIR 
 - **1D 선형 주소 방식**: hpf_addra / lpf_addra를 픽셀 출력마다 단순 증가, 상한에서 0 리셋. VGA_controller의 addrb 윈도우와 1:1 대응
 - **모드별 윈도우 오프셋**: 필터 경계 제거로 출력 크기가 모드마다 다름. VGA_controller에서 sw별 Vsync/Hsync 범위와 addrb 상한을 각각 지정
 - **BRAM 2클럭 레이턴시**: addrb 인가 시점보다 RGB 출력 윈도우를 2클럭 늦게 열어 타이밍 보정
-
+- **GRAYSCALE이 아닌 RGB : RGB환경에서의 FIR처리결과를 확인가능
 ## 개발 환경
 
 - **Tool**: Vivado 2024.2
